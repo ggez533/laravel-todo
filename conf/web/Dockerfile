@@ -19,21 +19,7 @@ RUN apt -y update \
             unzip \
             zip
 
-RUN apt -y install \
-            zlib1g-dev  \
-            libheif-dev \
-            libjpeg-dev \
-            libpng-dev \
-            libfreetype6-dev \
-            libjpeg62-turbo-dev \
-            librsvg2-dev \
-            libwebp-dev \
-            libxpm-dev \
-            libmagickwand-dev \
-            libzip-dev
 
-RUN pecl install imagick \
-    && docker-php-ext-enable imagick
 
 RUN docker-php-ext-install pdo_pgsql zip
 
